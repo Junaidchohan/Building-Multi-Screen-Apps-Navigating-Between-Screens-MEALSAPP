@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_navigator/screens/categories.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+import 'package:recipe_navigator/data/dummy_data.dart';
+import 'package:recipe_navigator/screens/meal.dart';
 
 
 final theme = ThemeData(
@@ -23,7 +25,10 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      home: const CategoriesScreen(),
+      home: const MealsScreen(
+        title: 'Some category...',
+        meals: dummyMeals,
+      ),
     );
   }
 }
